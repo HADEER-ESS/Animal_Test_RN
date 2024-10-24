@@ -1,0 +1,5 @@
+Model layer
+define the necessary business logic, data models, and data repositories
+
+This layer should encapsulate the core functionality of your application=> 
+such as API interactions, data transformations, and business rules.

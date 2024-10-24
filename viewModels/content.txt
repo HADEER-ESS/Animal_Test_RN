@@ -1,0 +1,5 @@
+ViewModel layer => bridge
+
+receives input from the View components, 
+processes it using the business logic from the Model layer,
+and provides the updated data back to the View
