@@ -8,10 +8,12 @@ const App = () => {
   // User View-Model and UserScreen
   const userViewModel = new UserViewModelImplementation();
   const [userData, setUserData] = useState(userViewModel.user);
+  const [showFlag, setShowFlag] = useState(false);
 
   function handleUserUpdateData() {
-    const updatedUser = userViewModel.updateUserData();
+    const updatedUser = userViewModel.showUser();
     setUserData(updatedUser); // update state with the new user object
+    setShowFlag(true);
 
   }
 
@@ -19,6 +21,8 @@ const App = () => {
     <UserScreen
       user={userData}
       onUpdateUser={handleUserUpdateData}
+      viewModel={userViewModel}
+      appeare={showFlag}
     />
   );
 }

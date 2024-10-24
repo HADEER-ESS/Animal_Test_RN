@@ -3,7 +3,20 @@ import UserModel from "../model/UserModle";
 class UserViewModelImplementation {
 
     constructor() {
-        this.user = new UserModel(1, "Steve Ali", "steve.ali@gmail.com")
+        this.user = new UserModel(1, "", "");
+    }
+
+    addUserName(name) {
+        this.user.name = name;
+        console.log("from add nam function ", this.user);
+    }
+    addUserEmail(email) {
+        this.user.email = email;
+        console.log("from add email function ", this.user);
+    }
+    showUser() {
+        console.log("from show function ", this.user);
+        return this.user;
     }
 
     updateUserData() {
