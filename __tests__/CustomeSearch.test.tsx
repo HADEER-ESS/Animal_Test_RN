@@ -15,7 +15,7 @@ describe("Custome Search Test", () => {
         expect(input).toBeDefined();
     });
 
-    it("input value listen to the text change", async () => {
+    it("input value listen to the text change", () => {
 
         const mockState = jest.fn((newValue: string) => { value = newValue; });
         let value = '';

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { fireEvent, render } from "@testing-library/react-native"
-import CustomeButton from "../src/component/CustomeButton"
+import { fireEvent, render } from "@testing-library/react-native";
+import CustomeButton from "../src/component/CustomeButton";
 import { describe, expect, it, jest } from '@jest/globals';
 
 /**
@@ -13,8 +13,9 @@ import { describe, expect, it, jest } from '@jest/globals';
 describe("Cusomte Button Component", () => {
 
     it("Should render on screen with text", async () => {
+        const mockFun = jest.fn();
 
-        const { getByTestId } = render(<CustomeButton title={"search"} />);
+        const { getByTestId } = render(<CustomeButton title={"search"} onPressAction={mockFun} />);
         const btn = getByTestId('search_btn');
 
         expect(btn).toBeTruthy();

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, ScrollView, Text } from 'react-native';
+import { ActivityIndicator, FlatList, ScrollView } from 'react-native';
 import CustomeButton from '../component/CustomeButton';
 import PokemonCard from '../component/PokemonCard';
 import { DogBreed } from '../util/Pokemon';
@@ -16,7 +16,6 @@ const HomeScreen = () => {
             const data = await FetchDogsData();
             setPokemonData(data);
         };
-
         fetchData();
     }, []);
 
@@ -37,8 +36,9 @@ const HomeScreen = () => {
                 testID="render_data_list"
                 data={pokemonData}
                 numColumns={2}
+                style={{ marginTop: 12 }}
                 columnWrapperStyle={{ justifyContent: 'space-around' }}
-                ListEmptyComponent={<Text>No Available Data...</Text>}
+                ListEmptyComponent={<ActivityIndicator color={"#990000"} size={"large"} style={{ marginTop: '44%', justifyContent: 'center', alignItems: 'center' }} />}
                 renderItem={({ item }) =>
                     <PokemonCard id={item.id} name={item.name} img_referance={item.reference_image_id} />
                 }
