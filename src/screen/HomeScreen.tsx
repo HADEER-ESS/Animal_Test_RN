@@ -16,7 +16,6 @@ const HomeScreen = () => {
             const data = await FetchDogsData();
             setPokemonData(data);
         };
-
         fetchData();
     }, []);
 
