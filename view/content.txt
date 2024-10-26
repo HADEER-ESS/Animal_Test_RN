@@ -1,6 +1,0 @@
-View layer:
-consists of React Native components and screen of your application.
-
-These components should be as dumb as possible, without any business logic.
-
-They should only receive data and user actions as props.
