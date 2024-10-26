@@ -1,0 +1,24 @@
+CASE
+we have a button component,
+a search component,
+and a Util function to filter the results depending on the 
+text input.
+
+Test Must cover the following =>
+{
+    Given — some precondition
+    When — some action executed by the function that you’re testing     ->  (action)
+    Then — the expected outcome     ->  (expect)
+}
+
+
+Component Test
+---------------
+1-create an instance of the component
+2-pass it props
+3-interact with it
+4-see how it behaves
+
+//Target TWO things in test 
+1-Interaction
+2-Output
