@@ -40,7 +40,7 @@ const HomeScreen = () => {
                 columnWrapperStyle={{ justifyContent: 'space-around' }}
                 ListEmptyComponent={<Text>No Available Data...</Text>}
                 renderItem={({ item }) =>
-                    <PokemonCard id={item.id} name={item.name} reference_image_id={item.reference_image_id} />
+                    <PokemonCard id={item.id} name={item.name} img_referance={item.reference_image_id} />
                 }
             />
         </ScrollView>

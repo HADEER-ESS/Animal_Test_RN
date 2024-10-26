@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { DogBreed } from '../util/Pokemon';
 
+type SubDogBreed = {
+  id: number;
+  name: string;
+  img_referance: string
+}
 
-const PokemonCard = ({ id, name, reference_image_id }: DogBreed) => {
+const PokemonCard = ({ id, name, img_referance }: SubDogBreed) => {
   return (
-    <View style={styles.containerStyle} key={id}>
+    <View style={styles.containerStyle} key={`card_${id}`}>
       <Image
         testID='pokemon_image'
-        source={{ uri: `https://cdn2.thedogapi.com/images/${reference_image_id}.jpg` }}
+        source={{ uri: `https://cdn2.thedogapi.com/images/${img_referance}.jpg` }}
         style={styles.imageStyle}
       />
       <Text
